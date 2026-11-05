@@ -5,7 +5,7 @@ import java.util.Set;
 /** Shared ownership rules for artifact parsing, installation and service routing. */
 public final class PluginServiceOwnership {
     public static final Set<String> SERVICES = Set.of(
-            "goods", "payment", "order", "auth", "base", "job", "merchant", "permission",
+            "mall", "goods", "payment", "order", "auth", "base", "job", "merchant", "permission",
             "thirdparty", "userms", "crm", "cms", "erp", "finance", "geo", "im", "logging",
             "mes", "oa", "orderfood", "pm", "rider", "supplier", "webpos", "tool");
 

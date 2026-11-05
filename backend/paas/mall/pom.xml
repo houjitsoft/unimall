@@ -46,6 +46,15 @@
             <artifactId>plugin-sdk</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <!-- 商城域插件共用的 Feign 客户端（activity-shared 的 com.houjiang.activity.feign）。
+             挂到 mall 的 8 个插件（券/积分/抽奖/满赠/拼团/红包/折扣/秒杀）会 @Autowired 这些客户端，
+             宿主必须把它们放进 classpath 并显式 @EnableFeignClients 扫描该包，
+             否则插件装载后调用时报 NoSuchBeanDefinitionException（order/goods/userms 同样处理）。 -->
+        <dependency>
+            <groupId>com.houjiang</groupId>
+            <artifactId>activity-shared</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- 插件平台按职责拆分；Mall 只做宿主装配，不再持有插件中心实现。 -->
         <!-- 线上插件目录与分发（M0 地基）：随 mall 宿主一起装配，不新增部署进程。 -->
         <dependency>

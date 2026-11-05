@@ -15,7 +15,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author Amos
  */
 @EnableFeignClients(basePackages = {
-        "com.houjiang.mall"
+        "com.houjiang.mall",
+        // 商城域插件共性 Feign（activity-shared 的 com.houjiang.activity.feign）。
+        // 只扫自身包会让插件 @Autowired 的 FeignClient 缺 bean，装载后首次调用即
+        // NoSuchBeanDefinitionException（order/goods/userms 也都显式追加了这个包）。
+        "com.houjiang.activity.feign"
         // plugin.market Feign adapters belong to base (plugin-center control plane).
         // Do not scan them from mall — see 系统架构.md §4.
 })

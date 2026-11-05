@@ -479,6 +479,12 @@ services:
     image: unimall/mall:${IMAGE_TAG:-latest}
     environment:
       - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+      # 插件宿主：mall 集中装载商城域插件（优惠券/积分商城/抽奖/满赠/拼团/红包/
+      # 商品折扣/秒杀）。host-service 必须与插件 plugin.yaml 的 hostService 一致。
+      # 兜底值；Nacos mall.yaml 的 houcloud.plugin.* 优先级更高。
+      - HOUCLOUD_PLUGIN_HOST_SERVICE=mall
+      - HOUCLOUD_PLUGIN_BOOT_ENABLED=true
+      - HOUCLOUD_PLUGIN_PLUGINS_DIR=/app/plugins
     # 插件宿主：插件 jar 落盘目录挂出来，容器重建不丢已装插件。
     # /app/plugins 与 base 同源（base 在线安装写这里，mall 装载也读这里）。
     volumes:

@@ -22,3 +22,12 @@ spring:
       connection-init-sql: SELECT 1
   main:
     allow-bean-definition-overriding: true
+
+# 商城核心服务的插件宿主能力：集中装载商城域插件（优惠券/积分商城/抽奖/满赠/
+# 拼团/红包/商品折扣/秒杀）。mall 是插件宿主之一，不承担全部插件的装载。
+# 注意：Nacos 配置优先级高于容器 env，改这里比改 compose 环境变量更可靠。
+houcloud:
+  plugin:
+    host-service: mall
+    boot-enabled: true
+    plugins-dir: /app/plugins

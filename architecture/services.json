@@ -401,14 +401,14 @@
     },
     {
       "code": "order-seckill",
-      "hostService": "order",
-      "path": "plugins/order/order-seckill",
+      "hostService": "mall",
+      "path": "plugins/mall/order-seckill",
       "runtime": "embedded"
     },
     {
       "code": "order-voucher",
-      "hostService": "order",
-      "path": "plugins/order/order-voucher",
+      "hostService": "mall",
+      "path": "plugins/mall/order-voucher",
       "runtime": "embedded"
     },
     {
@@ -419,8 +419,8 @@
     },
     {
       "code": "order-pintuan",
-      "hostService": "order",
-      "path": "plugins/order/order-pintuan",
+      "hostService": "mall",
+      "path": "plugins/mall/order-pintuan",
       "runtime": "embedded"
     },
     {
@@ -443,8 +443,8 @@
     },
     {
       "code": "order-gift",
-      "hostService": "order",
-      "path": "plugins/order/order-gift",
+      "hostService": "mall",
+      "path": "plugins/mall/order-gift",
       "runtime": "embedded"
     },
     {
@@ -455,8 +455,8 @@
     },
     {
       "code": "goods-discount",
-      "hostService": "goods",
-      "path": "plugins/goods/goods-discount",
+      "hostService": "mall",
+      "path": "plugins/mall/goods-discount",
       "runtime": "embedded"
     },
     {
@@ -485,20 +485,20 @@
     },
     {
       "code": "userms-redpacket",
-      "hostService": "userms",
-      "path": "plugins/userms/userms-redpacket",
+      "hostService": "mall",
+      "path": "plugins/mall/userms-redpacket",
       "runtime": "embedded"
     },
     {
       "code": "userms-lucky-draw",
-      "hostService": "userms",
-      "path": "plugins/userms/userms-lucky-draw",
+      "hostService": "mall",
+      "path": "plugins/mall/userms-lucky-draw",
       "runtime": "embedded"
     },
     {
       "code": "userms-points-mall",
-      "hostService": "userms",
-      "path": "plugins/userms/userms-points-mall",
+      "hostService": "mall",
+      "path": "plugins/mall/userms-points-mall",
       "runtime": "embedded"
     },
     {
