@@ -9,6 +9,7 @@
         <module>../../backend/contracts/plugin-api</module>
         <module>../../plugin-platform/runtime/plugin-engine</module>
         <module>goods</module>
+        <module>mall</module>
         <module>job</module>
         <module>order</module>
         <module>payment</module>
